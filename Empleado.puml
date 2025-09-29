@@ -1,0 +1,21 @@
+@startuml Empleado
+
+abstract class Empleado {
+  - RFC: 5
+  - apellidos: Gonzaloz
+  - nombres: Kevin
+
+  + Empleado(RFC = 5, apellidos = Gonzaloz, nombres = Kevin)
+}
+
+class EmpleadoVendedor extends Empleado {
+  - ventasMensuales: 20
+  - montoVentasMensuales: 15000
+  - sueldoBase: 8000
+  - ingresoMensual: 8750
+
+  + calcularIngresoMensual(): 8750
+  + mostrarDatos(): void
+}
+
+@enduml
